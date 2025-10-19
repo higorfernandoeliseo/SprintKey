@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="você se acha bom em digitação? Teste suas habilidades com essa ferramenta limpa e intuitiva.">
+    <meta name="author" content="Igor Eliseo">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/icons/line-awseome/line-awesome.min.css">
+    <title>SprintKey :: Teste sua velocidade na Digitação</title>
+</head>
+<body data-theme="light">
+    <header>
+        <h1><img src="assets/img/logo-light.webp" alt="Logo SprintKey"></h1>
+        <i id="mode_icon" class="lar la-moon"></i>
+    </header>
+    <main>
+        <div class="container">
+
+            <div class="stats">
+                <p>Tempo: <span id="timer">0s</span></p>
+                <p>Erros: <span class="mistakes">0</span></p>
+            </div>
+
+            <p id="descricao">Selecione um desafio abaixo para começar!</p>
+
+            <div id="quote" onmousedown="return false" onselectstart="return false"></div>
+
+            <textarea rows="3" id="text-input" placeholder="Digite o texto acima para treinar a velocidade da sua escrita"></textarea>
+
+            <div id="form-buttons">
+                 <select id="typeChallenge">
+                    <option selected value="Ttext">Texto</option>
+                    <option value="Tnumbers">Números</option>
+                    <option value="Tdados">Dados</option>
+                    <option value="Tsymbols">Simbolos</option>
+                 </select>
+                 <button id="gen_new_quote"><i class="las la-sync"></i></button>
+                 <button id="start-test">Iniciar</button>
+                 <button id="stop-test">Parar</button>
+            </div>
+
+            <div class="resultado">
+                <h3>Resultado</h3>
+                <div class="wrapper">
+                    <p>Precisão: <span id="precisao"></span></p>
+                    <p>Velocidade: <span id="wpm"></span></p>
+                </div>
+                <div id="buttons">
+                    <button id="new_game">Jogar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Desenvolvido por Igor Eliseo.</p>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

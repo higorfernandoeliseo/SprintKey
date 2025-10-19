@@ -1,0 +1,358 @@
+/* 
+
+    Direitos Autorais 2025 Igor F. Eliseo. 
+    
+*/
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Regular.woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Medium.woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'inter';
+    src: url('fonts/Inter-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('fonts/JetBrainsMono-Regular.woff2');
+    font-weight: normal;
+}
+
+:root {
+
+    --color-white: #fff;
+
+    /* --color-light-50: #e6e6e6; */
+    --color-light-50: #f5f6f8;
+    --color-light-100: #303135;
+
+    --color-light-10: #f1f1f3;
+    --color-dark-50: #dadce0;
+    --color-dark-100: #1a1b1f;
+    --color-dark-900: #000;
+
+    --color-red-50: #ffe0e3;
+    --color-red-100: #dd3546;
+
+    --color-green-50: #dafde1;
+    --color-green-100: #27a844;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.2s linear;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 20px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-light-10);
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.041);
+}
+
+header h1 img {
+    display: flex;
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 36px;
+    color: var(--color-dark-100);
+}
+
+main {
+    display: flex;
+    margin-top: 80px;
+}
+
+.container {
+    width: 80vmin;
+    padding: 30px 20px;
+    background-color: var(--color-white);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats {
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--color-dark-100);
+}
+
+.stats p {
+    margin-bottom: 5px;
+}
+
+.stats span {
+    font-weight: bold;
+    color: var(--color-dark-900);
+}
+
+#quote {
+    text-align: justify;
+    margin: 20px 0 30px 0;
+    color: var(--color-dark-100);
+    background-color: #f5f6f8;
+    padding: 10px;
+    border: 2px solid #edeef0;
+    border-radius: 8px;
+}
+
+#typeChallenge {
+    padding: 4px;
+    border: 2px solid var(--color-light-100);
+    border-radius: 6px;
+    outline: none;
+    background-color: var(--color-white);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#quote span {
+    font-family: 'JetBrains Mono';
+}
+
+textarea {
+    font-family: 'JetBrains Mono';
+    resize: none;
+    width: 100%;
+    border: 1px solid var(--color-dark-50);
+    border-radius: 5px;
+    padding: 10px 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+textarea:focus {
+    border: 1px solid var(--color-light-100);
+}
+
+.correto {
+    color: var(--color-green-100);
+    background-color: var(--color-green-50);
+}
+
+.incorreto {
+    color: var(--color-red-100);
+    background-color: var(--color-red-50);
+}
+
+.container div#form-buttons {   
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0px 10px 0px;
+}
+
+.container div#form-buttons button {
+    padding: 10px 30px;
+    background-color: var(--color-light-100);
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.container div#form-buttons button#gen_new_quote i {
+    font-size: 18px;
+}
+
+.resultado {
+    margin-top: 40px;
+    display: none;
+}
+
+.resultado h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: var(--color-dark-900);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper p {
+    color: var(--color-dark-100);
+}
+
+.wrapper span {
+    font-weight: bold;
+    color: var(--color-dark-900);
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#buttons button {
+    padding: 10px 30px;
+    background-color: var(--color-light-100);
+    color: var(--color-white);
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+footer p {
+    margin: 20px 0;
+    color: var(--color-dark-100);
+    font-weight: bold;
+}
+
+/* Modo escuro */
+
+body[data-theme="dark"] {
+
+    background-color: var(--color-dark-900);
+
+    header {
+        background-color: transparent;
+        border-bottom-color: var(--color-dark-100);
+    }
+
+    header h1 {
+        color: var(--color-dark-50);
+    }
+
+    #mode_icon {
+        color: var(--color-dark-50);
+    }
+
+    .container {
+        background-color: var(--color-dark-100);
+    }
+
+    .stats {
+        color: var(--color-dark-50);
+    }
+
+    .stats span {
+        color: var(--color-dark-50);
+    }
+
+    #quote {
+        color: var(--color-dark-50);
+        border-color: var(--color-light-100);
+        background-color: var(--color-dark-100);
+    }
+
+    #descricao {
+        color: var(--color-dark-50);
+    }
+
+    #typeChallenge {
+        color: var(--color-dark-50);
+        border: 2px solid var(--color-light-100);
+        background-color: var(--color-dark-100);
+        border-radius: 6px;
+        font-size: 40px;
+    }
+
+    textarea {
+        background-color: var(--color-dark-100);
+        border: 1px solid var(--color-light-100) !important;
+        color: var(--color-dark-50);
+    }
+
+    textarea:focus {
+        border: 1px solid var(--color-dark-50) !important;
+    }
+
+    .correto {
+        background: none !important;
+        color: var(--color-green-100);
+    }
+
+    .incorreto {
+        background: none !important;
+        color: var(--color-red-100);
+    }
+
+    .container div#form-buttons button,
+    #buttons button {
+        background-color: var(--color-dark-50);
+        color: var(--color-dark-100);
+    }
+
+    .resultado h3 {
+        color: var(--color-dark-50);
+    }
+
+    .wrapper p {
+        color: var(--color-dark-50);
+    }
+
+    .wrapper span {
+        color: var(--color-dark-50);
+    }
+
+    footer p {
+        color: var(--color-dark-50);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        width: 350px;
+    }
+
+    .container div#form-buttons button {
+        font-size: 18px;
+    }
+
+    .container div#form-buttons button i {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #buttons button {
+        font-size: 18px;
+    }
+
+}
