@@ -256,6 +256,7 @@ const startTime = () => {
     document.querySelector('#stop-test').style.display = "block";
     document.querySelector('#descricao').style.display = "none";
     document.querySelector('#typeChallenge').style.display = "none";
+    document.querySelector('#gen_new_quote').style.display = "block";
 }
 
 // Eventos dos botoes de Iniciar ou Parar o test.
@@ -304,7 +305,7 @@ const new_game = () => {
     document.querySelector('#start-test').style.display = "block";
     document.querySelector('#stop-test').style.display = "none";
     document.querySelector('.resultado').style.display = "none";
-    document.querySelector('#gen_new_quote').style.display = "block";
+    document.querySelector('#gen_new_quote').style.display = "none";
     document.querySelector('#descricao').style.display = "block";
     document.querySelector('#typeChallenge').style.display = "block";
 
@@ -314,6 +315,7 @@ window.onload = () => {
     inputDigitado.value = "";
     document.querySelector('#start-test').style.display = "block";
     document.querySelector('#stop-test').style.display = "none";
+    document.querySelector('#gen_new_quote').style.display = "none";
     inputDigitado.style.display = 'none';
     inputDigitado.disabled = true;
     //gerarNovaFrase();
