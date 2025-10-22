@@ -100,23 +100,6 @@ const gerarNovaFrase = () => {
         textoAlvo = ListSimbolos[rndIndice];
     }
 
-    // if (typeChallenge.value === "Texto") {
-    //     rndIndice = Math.floor(Math.random() * listaTextos.length); 
-    //     textoAlvo = listaTextos[rndIndice];
-    // }else if (typeChallenge.value === "Números") {
-    //     rndIndice = Math.floor(Math.random() * listNumbers.length); 
-    //     textoAlvo = listNumbers[rndIndice];
-    // } else if (typeChallenge.value === "Dados") {
-    //     rndIndice = Math.floor(Math.random() * ListaDados.length); 
-    //     textoAlvo = ListaDados[rndIndice];
-    // } else {
-    //     rndIndice = Math.floor(Math.random() * ListSimbolos.length); 
-    //     textoAlvo = ListSimbolos[rndIndice];
-    // }
-
-    //gera um numero aleatório para selecionar uma frase.
-    //let randomIndice = Math.floor(Math.random() * listaTextos.length); 
-
 
     spantextoExibido.innerHTML = "";
 
